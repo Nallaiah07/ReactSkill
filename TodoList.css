@@ -1,0 +1,140 @@
+/* General container */
+.todo-container {
+  max-width: 420px;
+  max-height: 70vh;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Heading */
+.todo-container h2 {
+  font-size: 26px;
+  color: #4a148c;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  background: inherit;
+  z-index: 2;
+  padding: 10px 0;
+}
+
+/* Empty message */
+.todo-container p {
+  font-size: 18px;
+  color: #388e3c;
+  font-weight: 500;
+}
+
+/* Task list */
+.todo-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Custom scrollbar */
+.todo-container ul::-webkit-scrollbar {
+  width: 8px;
+}
+.todo-container ul::-webkit-scrollbar-track {
+  background: #f3e5f5;
+  border-radius: 10px;
+}
+.todo-container ul::-webkit-scrollbar-thumb {
+  background: #9c27b0;
+  border-radius: 10px;
+}
+.todo-container ul::-webkit-scrollbar-thumb:hover {
+  background: #7b1fa2;
+}
+
+/* Task item */
+.todo-container li {
+  font-size: 17px;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 10px;
+  background: #f3e5f5;
+  color: #4a148c;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(74, 20, 140, 0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Completed task style */
+.todo-container li.completed {
+  text-decoration: line-through;
+  color: #777;
+  background: #d1c4e9;
+}
+
+/* Task header (checkbox + name) */
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Task name */
+.task-name {
+  flex-grow: 1;
+}
+
+/* Task time */
+.task-time {
+  font-size: 14px;
+  color: #555;
+  margin-left: 5px;
+}
+
+/* Task description */
+.task-desc {
+  font-size: 15px;
+  color: #333;
+  margin-top: 8px;
+  background: #e1bee7;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+/* Hover effect for tasks */
+.todo-container li:hover {
+  transform: translateY(-3px);
+  background: #e1bee7;
+}
+
+/* Click effect */
+.todo-container li:active {
+  transform: scale(0.95);
+}
+
+/* Decorative gradient background animation */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
